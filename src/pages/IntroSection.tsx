@@ -1,9 +1,39 @@
 import { Button } from "@/components/ui/button";
+import SplitText from "@/components/SplitText";
 
 const IntroSection = () => {
   return (
-    <section className="flex flex-col items-center space-y-10 py-25 w-full px-15">
-      <h1 className="text-6xl text-primary">YALE SCHOOL OF ART</h1>
+    <section className="flex flex-col items-center space-y-10 py-30 w-full px-15">
+      <div className="flex gap-10">
+        <SplitText
+          text="YALE SCHOOL OF"
+          className="text-8xl font-bold text-primary"
+          delay={100}
+          duration={0.6}
+          ease="power3.out"
+          splitType="chars"
+          from={{ opacity: 0, y: 40 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="-100px"
+          textAlign="center"
+          onLetterAnimationComplete={IntroSection}
+        />
+        <SplitText
+          text="ART"
+          className="text-8xl font-bold text-[#B77466]"
+          delay={120}
+          duration={0.6}
+          ease="power3.out"
+          splitType="chars"
+          from={{ opacity: 0, y: 40 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="-100px"
+          textAlign="center"
+          onLetterAnimationComplete={IntroSection}
+        />
+      </div>
       <div className="text-center space-y-4 py-4">
         <p className="text-md font-bold text-[#57595B] max-w-5xl">
           The School of Art is one of Yale’s Graduate & Professional Schools

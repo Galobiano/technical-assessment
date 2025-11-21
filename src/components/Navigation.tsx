@@ -1,13 +1,14 @@
 import { Link, useLocation } from "react-router-dom";
+import PillNav from "@/components/PillNav";
 
 const nav = [
-  { label: "Home", href: "/home" },
-  { label: "About the School", href: "/about-the-school" },
-  { label: "Apply to the School", href: "/apply-to-the-school" },
-  { label: "Exhibitions", href: "/exhibitions" },
-  { label: "Publications", href: "/publications" },
-  { label: "News", href: "/news" },
-  { label: "Public Event", href: "/public-event" },
+  { label: "HOME", href: "/home" },
+  { label: "ABOUT THE SCHOOL", href: "/about-the-school" },
+  { label: "APPLY TO THE SCHOOL", href: "/apply-to-the-school" },
+  { label: "EXHIBITIONS", href: "/exhibitions" },
+  { label: "PUBLICATIONS", href: "/publications" },
+  { label: "NEWS", href: "/news" },
+  { label: "PUBLIC EVENT", href: "/public-event" },
 ];
 
 const Navigation = () => {
@@ -21,8 +22,8 @@ const Navigation = () => {
           <Link
             key={label}
             to={href}
-            className={`text-primary font-bold ${
-              isActive ? "font-bold underline" : ""
+            className={`text-primary    hover:text-[#B77466] font-bold ${
+              isActive ? "" : ""
             }`}
           >
             {label}

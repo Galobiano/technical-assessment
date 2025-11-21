@@ -10,7 +10,7 @@ interface HeaderWrapperProps {
 
 const HeaderWrapper = ({ children, className }: HeaderWrapperProps) => {
   return (
-    <div className=" py-5 px-2 md:px-4 lg:px-6 mx-10 rounded-full ">
+    <div className=" py-5 shadow md:px-4 ">
       <div className={cn("w-full  flex justify-between", className)}>
         {children}
       </div>

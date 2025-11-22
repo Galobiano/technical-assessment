@@ -37,7 +37,7 @@ const Newsletters = [
 
 const CalendarAndLetters = () => {
   return (
-    <div className="py-15">
+    <div className="py-15 ">
       <h1 className="text-center">Calendars & Newsletters</h1>
 
       <div>

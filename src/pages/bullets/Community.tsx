@@ -27,7 +27,7 @@ const lowerDownBullits = [
 ];
 const Community = () => {
   return (
-    <div className="w-full h-full p-5 px-10 bg-[#C9B59C]/20">
+    <div className="w-full h-full p-5 px-10 ">
       <h1 className="flex justify-center pt-10">Community Bulletin Board</h1>
       <div className="grid grid-cols-3 w-full gap-7 pt-5 max-w-8xl mx-auto  mb-8">
         {lowerDownBullits.map((item, index) => (

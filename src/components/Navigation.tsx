@@ -1,5 +1,4 @@
 import { Link, useLocation } from "react-router-dom";
-import PillNav from "@/components/PillNav";
 
 const nav = [
   { label: "HOME", href: "/home" },

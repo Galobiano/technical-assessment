@@ -1,12 +1,18 @@
-interface calendarDetails {
+import React, { ReactNode } from "react";
+import { FaLocationArrow, FaClock } from "react-icons/fa";
+
+interface CalendarDetails {
   numberDate: string;
   date: string;
   title: string;
   detail: string;
   location?: string;
   dateAndTime?: string;
+  iconLocation?: ReactNode;
+  iconTime?: ReactNode;
 }
-export const calendar: calendarDetails[] = [
+
+export const calendar: CalendarDetails[] = [
   {
     numberDate: "8",
     date: "NOV",
@@ -14,6 +20,8 @@ export const calendar: calendarDetails[] = [
     detail: "Saturday, November 8 – Tuesday, November 25, 2025Green Hall",
     location: "1156 Chapel Street",
     dateAndTime: "Nov 8th 12:00 PM - 25th Nov 6:00 PM EST",
+    iconLocation: React.createElement(FaLocationArrow),
+    iconTime: React.createElement(FaClock),
   },
   {
     numberDate: "22",
@@ -23,6 +31,8 @@ export const calendar: calendarDetails[] = [
       "Thursday, November 206-7:30PM1156 Chapel St., Graphic Design Atrium The Fall 202...",
     location: "Green Hall, Graphic Design Atrium",
     dateAndTime: "6:00 PM - 7:30 PM EST",
+    iconLocation: React.createElement(FaLocationArrow),
+    iconTime: React.createElement(FaClock),
   },
   {
     numberDate: "24",
@@ -32,6 +42,8 @@ export const calendar: calendarDetails[] = [
       "Hosted by NXTHVN Saturday, November 225PM-7PMNXTHVNFree RSVP on Eventbrite > Hea...",
     location: "NXTHVN",
     dateAndTime: "5:00 PM - 7:00 PM EST",
+    iconLocation: React.createElement(FaLocationArrow),
+    iconTime: React.createElement(FaClock),
   },
   {
     numberDate: "01",
@@ -47,6 +59,8 @@ export const calendar: calendarDetails[] = [
       "Sculpture critiques during the Fall 2025 semester are open to the School of Art ...",
     location: "36 Edgewood Ave., New Haven",
     dateAndTime: "12:00 PM - 3:30 PM EST",
+    iconLocation: React.createElement(FaLocationArrow),
+    iconTime: React.createElement(FaClock),
   },
   {
     numberDate: "02",
@@ -56,5 +70,7 @@ export const calendar: calendarDetails[] = [
       "Hosted by the Yale Center for British Art Tuesday, December 2, 202512:30–1 pm ET..",
     location: "Yale Center for British Art",
     dateAndTime: "12:30 PM - 1:00 PM EST",
+    iconLocation: React.createElement(FaLocationArrow),
+    iconTime: React.createElement(FaClock),
   },
 ];

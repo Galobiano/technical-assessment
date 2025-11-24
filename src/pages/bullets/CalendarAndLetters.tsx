@@ -42,7 +42,7 @@ const CalendarAndLetters = () => {
 
       <div>
         <div className="grid grid-cols-2 w-full gap-7  max-w-4xl mx-auto mt-8 ">
-          <Card className=" mb-4">
+          <Card className="bg-[#B77466] text-secondary mb-4 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
             <CardHeader>
               <CardTitle className="flex justify-center">
                 NEW CALENDARS BEGINNING SUMMER 2020
@@ -60,9 +60,9 @@ const CalendarAndLetters = () => {
             ))}
           </Card>
 
-          <Card className=" mb-4">
+          <Card className="bg-[#B77466] text-secondary mb-4 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
             <CardHeader>
-              <CardTitle className="flex justify-center">
+              <CardTitle className="flex justify-center ">
                 Get news from the Yale School of Art in your inbox: Sign up for
                 our newsletters
               </CardTitle>

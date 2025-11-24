@@ -1,4 +1,5 @@
 import { Card, CardDescription, CardHeader } from "@/components/ui/card";
+import { TbPinFilled } from "react-icons/tb";
 
 const upperTopBullits = [
   {
@@ -27,23 +28,41 @@ const lowerDownBullits = [
 ];
 const Community = () => {
   return (
-    <div className="w-full h-full p-5 px-10 ">
+    <div className=" h-full p-5 px-10 ">
       <h1 className="flex justify-center pt-10">Community Bulletin Board</h1>
-      <div className="grid grid-cols-3 w-full gap-7 pt-5 max-w-8xl mx-auto  mb-8">
+      <div className="relative grid grid-cols-3 w-full gap-7 pt-5 max-w-7xl mx-auto mb-8">
         {lowerDownBullits.map((item, index) => (
-          <Card key={index} className=" mb-4">
+          <Card
+            key={index}
+            className="group hover:bg-[#B77466] relative mb-4 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+          >
             <CardHeader>
-              <CardDescription>{item.description}</CardDescription>
+              <CardDescription className="group-hover:text-secondary transition-colors duration-300">
+                {item.description}
+              </CardDescription>
             </CardHeader>
+
+            <span className="absolute -top-3 -left-3 rotate-[280deg]">
+              <TbPinFilled className="size-7 text-[#B77466] group-hover:text-primary " />
+            </span>
           </Card>
         ))}
       </div>
-      <div className="grid grid-cols-2 w-full gap-7  max-w-7xl mx-auto mt-8 ">
+
+      <div className="relative grid grid-cols-2 w-full gap-7  max-w-5xl mx-auto mt-8 ">
         {upperTopBullits.map((item, index) => (
-          <Card key={index} className=" mb-4">
+          <Card
+            key={index}
+            className="group hover:bg-[#B77466] relative mb-4 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+          >
             <CardHeader>
-              <CardDescription>{item.description}</CardDescription>
+              <CardDescription className="group-hover:text-secondary transition-colors duration-300">
+                {item.description}
+              </CardDescription>
             </CardHeader>
+            <span className="absolute -top-3 -left-3 rotate-[280deg]">
+              <TbPinFilled className="size-7 text-[#B77466] group-hover:text-primary " />
+            </span>
           </Card>
         ))}
       </div>

@@ -6,9 +6,9 @@ interface LogoLinkProps {
 
 const LogoLink = ({ className }: LogoLinkProps) => {
   return (
-    <div className={`flex items-center `}>
-      <img src={logo} alt="" className={`size-17 ${className}`} />
-      <p className="font-bold text-xl text-primary">YALE School of Art</p>
+    <div className="flex items-center">
+      <img src={logo} alt="" className="w-16 pt-2" />
+      <p className={`${className}`}>YALE SCHOOL OF ART</p>
     </div>
   );
 };

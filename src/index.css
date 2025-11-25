@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
 body{
+   font-family: "Poppins", sans-serif;
   background-color: #F9F8F6;
 }
 
@@ -16,7 +18,6 @@ body{
   scrollbar-width: none; 
 }
 
-
 :root {
   --primary: #452829;
   --secondary: oklch(0.97 0 0);
@@ -26,7 +27,7 @@ body{
   --shadow-custom: 0px 2px 16px 0px #2020201A;
   --color-gradient: linear-gradient(90deg, #E5D1ED 0%, #221545 100%);
   --background: oklch(1 0 0);
-  --sidebar: oklch(0.985 0 0);
+--sidebar: linear-gradient(to top, white, #E8D1C5);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
   --sidebar-primary-foreground: oklch(0.985 0 0);
@@ -35,10 +36,6 @@ body{
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 
-  --destructive: oklch(0.577 0.245 27.325);
-  --green: #418E43;
-  --orange: #FF9900;
-  --yellow: #FFD938;
   --radius: 0.625rem;
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -222,6 +219,19 @@ body{
     }
   }
 }
+
+/* Sidebar utility mappings
+  These map the project-specific token classes (e.g. "bg-sidebar")
+  to the CSS custom properties you've defined in :root / @theme.
+  This lets Tailwind-style class names used in components resolve to
+  the intended variable-driven colors / gradients. */
+.bg-sidebar { background: var(--color-sidebar) !important; }
+.text-sidebar-foreground { color: var(--color-sidebar-foreground) !important; }
+.bg-sidebar-accent { background: var(--color-sidebar-accent) !important; }
+.text-sidebar-accent-foreground { color: var(--color-sidebar-accent-foreground) !important; }
+.border-sidebar-border { border-color: var(--color-sidebar-border) !important; }
+.ring-sidebar-ring { --tw-ring-color: var(--color-sidebar-ring); }
+
 
 @utility no-scrollbar {
   @apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;

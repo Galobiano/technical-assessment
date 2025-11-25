@@ -1,12 +1,13 @@
 import Oncalendar from "./Oncalendar";
-import LatestUpdatesSection from "./LatestUpdatesSection";
 import Community from "./Community";
+import Notes from "./Notes";
 import CalendarAndLetters from "./CalendarAndLetters";
 
 const BulletInSection = () => {
   return (
     <div className="">
-      <h1 className="flex flex-col items-center text-3xl font-bold mb-8">
+      <Notes />
+      <h1 className="text-center text-xl sm:text-2xl md:text-4xl font-bold mb-8 bg-gradient-to-t from-primary to-[#B77466] bg-clip-text text-transparent">
         HAPPENING AT SOA COMMUNITY BULLETIN BOARD CALENDARS & NEWSLETTERS
       </h1>
 

@@ -75,7 +75,7 @@ const SentAMessage: React.FC = () => {
         <CardContent>
           <form className="space-y-2" onSubmit={handleSubmit}>
             <div className="space-y-2">
-              <Label className="text-md text-[#B77466]">Name</Label>
+              <Label className="text-md text-[#B77466] font-bold">Name</Label>
               <Input
                 type="text"
                 name="name"
@@ -88,7 +88,7 @@ const SentAMessage: React.FC = () => {
             </div>
 
             <div className="space-y-2">
-              <Label className="text-md text-[#B77466]">Email</Label>
+              <Label className="text-md text-[#B77466]  font-bold">Email</Label>
               <Input
                 type="email"
                 name="email"
@@ -101,7 +101,9 @@ const SentAMessage: React.FC = () => {
             </div>
 
             <div className="space-y-2">
-              <Label className="text-md text-[#B77466]">Subject</Label>
+              <Label className="text-md text-[#B77466]  font-bold">
+                Subject
+              </Label>
               <Input
                 type="text"
                 name="subject"
@@ -114,7 +116,9 @@ const SentAMessage: React.FC = () => {
             </div>
 
             <div className="space-y-2">
-              <Label className="text-md text-[#B77466]">Message</Label>
+              <Label className="text-md text-[#B77466]  font-bold">
+                Message
+              </Label>
               <Textarea
                 name="message"
                 placeholder="Message"
@@ -125,7 +129,10 @@ const SentAMessage: React.FC = () => {
               />
             </div>
 
-            <Button type="submit" className="py-5 px-6 rounded-full mt-2">
+            <Button
+              type="submit"
+              className="py-5 px-6 rounded-full mt-2 cursor-pointer font-bold"
+            >
               SEND MESSAGE
             </Button>
 

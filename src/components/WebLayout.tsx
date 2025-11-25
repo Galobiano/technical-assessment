@@ -1,19 +1,23 @@
 import { Outlet } from "react-router-dom";
+import { SidebarProvider } from "@/components/ui/sidebar";
 import Header from "./Header";
+import SideBarNav from "./SideBarNav";
 import Footer from "./Footer";
 import IntroSection from "@/pages/IntroSection";
+
 const WebLayout = () => {
   return (
-    <div className="flex min-h-screen flex-col">
-      <div className=" bg-linear-to-t to-[#E8D1C5] pb-10">
+    <SidebarProvider className="flex flex-col">
+      <SideBarNav />
+      <div className="relative bg-linear-to-t to-[#E8D1C5] ">
         <Header />
         <IntroSection />
       </div>
-      <main className="flex-grow">
+      <main className="w-full max-w-[120rem] mx-auto flex-grow overflow-auto md:overflow-hidden">
         <Outlet />
       </main>
       <Footer />
-    </div>
+    </SidebarProvider>
   );
 };
 

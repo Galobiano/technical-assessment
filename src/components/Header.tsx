@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import Navigation from "./Navigation";
+import { SidebarTrigger } from "./ui/sidebar";
 import { cn } from "@/libs/utils";
 import LogoLink from "./LogoLink";
 
@@ -22,8 +23,13 @@ const Header = () => {
   return (
     <div>
       <HeaderWrapper className="flex items-center">
-        <LogoLink />
-        <Navigation />
+        <LogoLink className="font-bold  md:text-sm" />
+        <div className="hidden md:block">
+          <Navigation />
+        </div>
+        <div className="flex mr-5 justify-end md:hidden">
+          <SidebarTrigger />
+        </div>
       </HeaderWrapper>
     </div>
   );

@@ -1,5 +1,6 @@
 import { Card, CardDescription, CardHeader } from "@/components/ui/card";
 import { TbPinFilled } from "react-icons/tb";
+import { motion } from "framer-motion";
 
 const upperTopBullits = [
   {
@@ -28,45 +29,53 @@ const lowerDownBullits = [
 ];
 const Community = () => {
   return (
-    <div className=" h-full p-5 px-10 ">
-      <h1 className="flex justify-center pt-10">Community Bulletin Board</h1>
-      <div className="relative grid grid-cols-3 w-full gap-7 pt-5 max-w-7xl mx-auto mb-8">
-        {lowerDownBullits.map((item, index) => (
-          <Card
-            key={index}
-            className="group hover:bg-[#B77466] relative mb-4 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-          >
-            <CardHeader>
-              <CardDescription className="group-hover:text-secondary transition-colors duration-300">
-                {item.description}
-              </CardDescription>
-            </CardHeader>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+    >
+      <div className=" h-full p-5 px-10 ">
+        <h1 className="text-xl sm:text-2xl md:text-3xl text-center pt-10 bg-gradient-to-t from-primary to-[#B77466] bg-clip-text text-transparent">
+          Community Bulletin Board
+        </h1>
+        <div className="relative grid grid-cols-1 lg:grid-cols-3 w-full gap-7 pt-5  lg:max-w-7xl mx-auto mb-8">
+          {lowerDownBullits.map((item, index) => (
+            <Card
+              key={index}
+              className="group hover:bg-[#B77466] relative mb-4 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            >
+              <CardHeader>
+                <CardDescription className="group-hover:text-secondary transition-colors duration-300">
+                  {item.description}
+                </CardDescription>
+              </CardHeader>
 
-            <span className="absolute -top-3 -left-3 rotate-[280deg]">
-              <TbPinFilled className="size-7 text-[#B77466] group-hover:text-primary " />
-            </span>
-          </Card>
-        ))}
-      </div>
+              <span className="absolute -top-3 -left-3 rotate-[280deg]">
+                <TbPinFilled className="size-7 text-[#B77466] group-hover:text-primary " />
+              </span>
+            </Card>
+          ))}
+        </div>
 
-      <div className="relative grid grid-cols-2 w-full gap-7  max-w-5xl mx-auto mt-8 ">
-        {upperTopBullits.map((item, index) => (
-          <Card
-            key={index}
-            className="group hover:bg-[#B77466] relative mb-4 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-          >
-            <CardHeader>
-              <CardDescription className="group-hover:text-secondary transition-colors duration-300">
-                {item.description}
-              </CardDescription>
-            </CardHeader>
-            <span className="absolute -top-3 -left-3 rotate-[280deg]">
-              <TbPinFilled className="size-7 text-[#B77466] group-hover:text-primary " />
-            </span>
-          </Card>
-        ))}
+        <div className="relative grid grid-cols-1 lg:grid-cols-2 w-full gap-7  max-w-5xl mx-auto mt-8 ">
+          {upperTopBullits.map((item, index) => (
+            <Card
+              key={index}
+              className="group hover:bg-[#B77466] relative mb-4 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            >
+              <CardHeader>
+                <CardDescription className="group-hover:text-secondary transition-colors duration-300">
+                  {item.description}
+                </CardDescription>
+              </CardHeader>
+              <span className="absolute -top-3 -left-3 rotate-[280deg]">
+                <TbPinFilled className="size-7 text-[#B77466] group-hover:text-primary " />
+              </span>
+            </Card>
+          ))}
+        </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

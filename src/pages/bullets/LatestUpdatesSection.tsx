@@ -7,9 +7,9 @@ import {
 
 const LatestUpdatesSection = () => {
   return (
-    <div className="grid grid-cols-2 max-w-3xl mx-auto gap-10 mb-10 pt-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 max-w-3xl mx-auto md:gap-20 pt-15 ">
       <div>
-        <Card className="max-w-2xl mb-4">
+        <Card className="max-w-2xl mb-4  transition-all duration-300 hover:scale-105">
           <CardHeader>
             <CardTitle>2026 Admission Virtual Information Sessions</CardTitle>
             <CardDescription>
@@ -20,7 +20,7 @@ const LatestUpdatesSection = () => {
       </div>
 
       <div>
-        <Card className="max-w-2xl mb-4">
+        <Card className="max-w-2xl mb-4  transition-all duration-300 hover:scale-105">
           <CardHeader>
             <CardTitle>
               See the Fall 2025 Visiting Artist lecture schedule here (in

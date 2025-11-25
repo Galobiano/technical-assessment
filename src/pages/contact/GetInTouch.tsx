@@ -14,9 +14,9 @@ const Information = [
 
 const GetInTouch = () => {
   return (
-    <section>
-      <div>
-        <h1 className="text-[#B77466]">Get In Touch</h1>
+    <section className="space-y-10">
+      <div className="space-y-3">
+        <h1 className="text-[#B77466] font-bold ">Get In Touch</h1>
         <p>
           For all administrative, academic, and admissions-related inquiries,
           please contact the Yale School of Art Office. Our staff will direct
